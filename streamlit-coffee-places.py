@@ -3,7 +3,7 @@ import streamlit.components.v1 as components
 import pandas as pd
 import urllib.parse
 
-data = pd.read_csv('/Users/stanislavbruch/Documents/Python/coffee-map-project/database.csv', delimiter=';')
+data = pd.read_csv('database.csv', delimiter=';')
 
 df = pd.DataFrame(data)
 
