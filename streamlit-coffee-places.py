@@ -35,14 +35,14 @@ filtered_data = df[
     #(df["budget"] >= budget[0]) & 
     #(df["budget"] <= budget[1])
 ]
-
+GOOGLE_MAPS_API = st.secrets["GOOGLE_MAPS_API"]
 # Function to generate Google Maps iframe for a given location with a marker and name
 def create_map(name):
     # URL encode the name for use in a query parameter
     name_encoded = urllib.parse.quote(name)
     return f"""
     <iframe width="700" height="800" style="border:0" loading="lazy" allowfullscreen
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAcd9MxsEkda0ApfQGwl0WPXMKaunX_lE0&q={name_encoded}&zoom=17">
+    src="https://www.google.com/maps/embed/v1/place?key={GOOGLE_MAPS_API}&q={name_encoded}&zoom=17">
     </iframe>
     """
 
